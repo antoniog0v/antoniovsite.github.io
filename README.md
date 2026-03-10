@@ -11,7 +11,7 @@ clean and easy to navigate for those who are interested in my achievements and a
 ## Target Audience:
 
 This site in intended for either future employers or clients to get a strong idea
-of my areas of expertise, or those who are simply interested in my skillset or what
+of my areas of expertise, or those who are simply interested in my skillset and what
 I have to offer.
 
 ## Content Strategy:
