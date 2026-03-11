@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Antonio Villani</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<!-- NAVBAR SECTION -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+
+        <a class="navbar-brand fw-bold" href="index.html">
+            Antonio Villani
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="projects.html">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="skills.html">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="resume.pdf" target="_blank">Resume</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- HEADER -->
+
+<section class="py-5 text-center">
+    <div class="container">
+        <h1 class="fw-bold">Contact</h1>
+        <p class="lead">
+            Feel free to reach out if you'd like to collaborate, ask questions, or discuss opportunities.
+        </p>
+    </div>
+</section>
+
+<!-- CONTACT FORM -->
+
+<section class="pb-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form id = "contactForm" action="https://formspree.io/f/meerglvg" method="POST">
+                    <div class="mb-3">
+                        <label class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Your name">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Your email">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-dark w-100">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- DIRECT CONTACT LINKS -->
+
+<section class="bg-light py-5 text-center">
+    <div class="container">
+        <h4 class="fw-bold mb-4">Other Ways to Reach Me</h4>
+        <a href="mailto:antoniogvillani@gmail.com" class="btn btn-outline-dark me-3">
+            Email
+        </a>
+        <a href="https://github.com/antoniog0v" class="btn btn-outline-dark me-3" target="_blank">
+            GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/antonio-villani-328588293/" class="btn btn-outline-dark" target="_blank">
+            LinkedIn
+        </a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+
+<footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+        <p class="mb-3">© 2026 Antonio Villani</p>
+        <a href="https://www.linkedin.com/in/antonio-villani-328588293/" class="text-white me-3">LinkedIn</a>
+        <a href="https://github.com/antoniog0v" class="text-white me-3">GitHub</a>
+        <a href="mailto:antoniogvillani@gmail.com" class="text-white">Email</a>
+    </div>
+</footer>
+
+<!-- JAVASCRIPT FOR FORM VALIDATION -->
+
+<script>
+    document.getElementById("contactForm").addEventListener("submit", function(event){
+        let name=document.getElementById("name").value.trim();
+        let email=document.getElementById("email").value.trim();
+        let message=document.getElementById("message").value.trim();
+        if(name===""||email===""||message===""){
+            alert("Please fill out all fields before sending your message.");
+            event.preventDefault();
+            return;
+        }
+        let emailPattern=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if(!emailPattern.test(email)){
+            alert("Please enter a valid email address.");
+            event.preventDefault();
+            return;
+        }
+    });
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
