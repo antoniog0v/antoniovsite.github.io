@@ -79,7 +79,7 @@ Yes, primarily images for projects and occasional icons for navigation or links.
 12. What portfolio websites inspired your design?
 A portfolio created by a friend in graphic design.
 
-##Part 3: Interactivity
+## Part 3: Interactivity
 
 1. What interactive elements will your site include?
 Navigation menus, buttons, and a contact form.
